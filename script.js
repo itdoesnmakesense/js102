@@ -1,12 +1,19 @@
 $(document).ready(function() {
-function sortFunc(text){
-  return newArray.sort();
+
+function sortFunc(array){
+  console.log(array.sort());
 }
 
 
-var higherFunc = function(text) {
-  if(text[i] > 25){
-    console.log(text[i]);
+var higherFunc = function(array) {
+
+  for(i=0; i < array.length; i++)
+      if(array[i] > 25){
+        // var newArray = [];
+        var sortedArray = newArray.push(array[i]);
+    console.log(array[i]);
+    console.log(sortedArray);
+     // sortFunc(sortedArray);
  
   }
 
@@ -15,17 +22,19 @@ var higherFunc = function(text) {
 $(function () {
     $('#button').on('click',function(){
         var text = $('#inputText').val();
-        var textArray = text.split("|");  
-      
-      for (i = 0; i < textArray.length; i++) {
-        
-        higherFunc(textArray);
-        }
-        
-        
-         
-});
-});
+        var textArray = text.split(",");  
+               console.log("clicked");
+          
+            higherFunc(textArray);
+    });
+  });
+
+
+
+
+
+
+
 
 });
 
